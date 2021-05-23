@@ -1,5 +1,5 @@
 const Koa = require('koa')
-const bodyParser = require('body-parser')
+const bodyParser = require('koa-bodyparser')
 
 const userRouter = require('../router/user.router.js')
 

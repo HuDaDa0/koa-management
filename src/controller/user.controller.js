@@ -1,6 +1,15 @@
+const userService = require('../service/user.service')
+
+
 class UserController {
   async create (ctx, next) {
-    ctx.body = '创建成功'
+
+    const user = ctx.request.body
+    console.log(user, '==user==')
+
+    const result = await userService.create(user)
+
+    ctx.body = result
   }
 }
 
